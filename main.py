@@ -40,11 +40,11 @@ def main():
             print(Fore.RED + "[!] STARTING PUBLIC SSH KEY GENERATION, DO NOT INTERFERE WITH THE PROCEDURE TO AVOID MALFUNCTIONS!")
             subprocess.Popen('cmd.exe')
             realbro = os.path.expanduser(r"~/.ssh/")
-            pyautogui.typewrite(f"cd {realbro}", speed=0.1)
+            pyautogui.typewrite(f"cd {realbro}")
             pyautogui.press("enter")
-            pyautogui.typewrite("ssh-keygen", speed=0.1)
+            pyautogui.typewrite("ssh-keygen")
             pyautogui.press("enter")
-            pyautogui.typewrite("id_rsa", speed=0.1)
+            pyautogui.typewrite("id_rsa")
             pyautogui.press("enter")
             pyautogui.press("enter")
         else:
@@ -56,7 +56,7 @@ def main():
     idsite = input('Subdom name: ')
     
     subprocess.Popen('cmd.exe')
-    pyautogui.typewrite(f"ssh -o ServerAliveInterval=60 -R {idsite}:80:localhost:5000 serveo.net", speed=0.1)
+    pyautogui.typewrite(f"ssh -o ServerAliveInterval=60 -R {idsite}:80:localhost:5000 serveo.net")
     pyautogui.press("enter")
     
     
